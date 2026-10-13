@@ -1,0 +1,6 @@
+{
+  "name": "prompts-per-day",
+  "version": "0.1.0",
+  "description": "GitHub-style heatmap of prompts sent per day, opened by an arrow beside the prompt.",
+  "types": "./types/index.d.ts"
+}

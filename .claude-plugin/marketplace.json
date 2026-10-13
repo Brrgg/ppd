@@ -1,0 +1,5 @@
+{
+  "name": "arthur-mods",
+  "owner": { "name": "Arthur" },
+  "plugins": [{ "name": "prompts-per-day", "source": "./" }]
+}

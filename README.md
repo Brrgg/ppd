@@ -1,47 +1,47 @@
 # prompts-per-day
 
-Mod do Claude Code que mostra um heatmap no estilo do GitHub com a quantidade de prompts que você enviou por dia, ao longo do ano.
+A Claude Code mod that shows a GitHub-style heatmap of how many prompts you sent each day of the year.
 
-Digite `/ppd` para abrir ou fechar o painel. Ele aparece logo acima da caixa de prompt.
+Type `/ppd` to open or close the panel. It appears right above the prompt box.
 
-## O que ele mostra
+## What it shows
 
-- Um quadrado por dia do ano, mais escuro quanto mais prompts naquele dia.
-- O total de prompts do ano e quantos você já mandou hoje.
-- O dia mais cheio do ano.
+- One square per day of the year, darker the more prompts you sent that day.
+- The year's total and how many prompts you have sent today.
+- Your busiest day of the year.
 
-No terminal o painel é uma grade de texto. Em superfícies que desenham gráficos (como o app desktop), é um SVG com tooltip em cada dia.
+In the terminal the panel is a text grid. On surfaces that can draw graphics (such as the desktop app) it is an SVG with a tooltip on each day.
 
-## Instalação
+## Install
 
-Dentro do Claude Code, rode:
+Inside Claude Code, run:
 
 ```
 /plugin marketplace add Brrgg/ppd
 /plugin install prompts-per-day@arthur-mods
 ```
 
-Depois reinicie a sessão. O comando `/ppd` fica disponível.
+Then restart the session. The `/ppd` command is now available.
 
-## Uso
+## Usage
 
-| Comando | O que faz |
+| Command | What it does |
 | --- | --- |
-| `/ppd` | Abre o painel; rodar de novo fecha |
+| `/ppd` | Opens the panel; run it again to close it |
 
-## Seus dados
+## Your data
 
-A contagem fica só no seu computador, na pasta de configuração do Claude Code (`~/.claude/plugins/store`). O mod conta apenas quantos prompts você enviou em cada dia. Ele não guarda o texto dos prompts e não envia nada para fora.
+The counts stay on your computer, in Claude Code's configuration folder (`~/.claude/plugins/store`). The mod only counts how many prompts you send each day. It does not store the text of your prompts and sends nothing anywhere.
 
-## Desinstalar
+## Uninstall
 
 ```
 /plugin uninstall prompts-per-day@arthur-mods
 ```
 
-## Desenvolvimento
+## Development
 
-O código fica em `hooks/`: `register.tsx` registra o comando e desenha o painel, e `heatmap.ts` calcula a grade. Para validar:
+The code lives in `hooks/`: `register.tsx` registers the command and draws the panel, and `heatmap.ts` builds the grid. To validate the mod:
 
 ```
 claude plugin validate .
